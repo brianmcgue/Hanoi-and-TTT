@@ -16,10 +16,11 @@
 	};
 
 	UI.prototype.installKeyHandlers = function () {
-		this.$el.on('keydown', function(event) {
-			var dir = this.keyMapping[event.which];
+		var ui = this;
+		$(window).on('keydown', function(event) {
+			var dir = ui.keyMapping[event.which];
 			if (dir !== undefined) {
-				this.board.snake.turn(dir);
+				ui.board.snake.turn(dir);
 			}
 		});
 	};
@@ -27,7 +28,7 @@
 	UI.prototype.start = function () {
 		this.board = new SnakeGame.Board();
 		this.installKeyHandlers();
-		setInterval(this.step.bind(this), 500);
+		setInterval(this.step.bind(this), 200);
 	};
 
 	UI.prototype.step = function () {
