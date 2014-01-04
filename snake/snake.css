@@ -1,3 +1,15 @@
-.container {
-	height: 800px;
+div.container {
+	height: 500px;
+}
+
+div.row {
+	width: 400px;
+}
+
+div.tile {
+	height: 20px;
+	width: 20px;
+	background-color: lightgray;
+	border: white thin solid;
+	box-sizing: border-box;
 }
