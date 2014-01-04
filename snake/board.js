@@ -9,16 +9,6 @@
 			Math.floor(this.gridSize / 2)
 		];
 		this.snake = new SnakeGame.Snake(this);
-		this.dirMapping = {
-			'N': [-1, 0],
-			'E': [ 0, 1],
-			'S': [ 1, 0],
-			'W': [ 0,-1]
-		};
-	};
-
-	Board.prototype.add = function (coord1, coord2) {
-		return [coord1[0] + coord2[0], coord1[1] + coord2[1]];
 	};
 
 	Board.prototype.coordIncludes = function (arrOfCoords, target) {
@@ -31,8 +21,9 @@
 	};
 
 	Board.prototype.makeGrid = function () {
-    return _.times(20, function (i) {
-      return _.times(20, function (j) {
+		var board = this;
+    return _.times(board.gridSize, function (i) {
+      return _.times(board.gridSize, function (j) {
         return null;
       });
     });
@@ -41,12 +32,12 @@
 	Board.prototype.render = function () {
 		var text = "";
 
-		for(var i = 0; i < this.grid.length; i++) {
-			for(var j = 0; j < this.grid.length; j++) {
+		for(var i = 0; i < this.gridSize; i++) {
+			for(var j = 0; j < this.gridSize; j++) {
 				if (this.coordIncludes(this.snake.segments, [i, j])) {
-					text += "S";
+					text += " S";
 				} else {
-					text += ".";
+					text += " .";
 				}
 			}
 
