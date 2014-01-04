@@ -1,0 +1,25 @@
+div.tile {
+	float: left;
+	height: 100px;
+	width: 100px;
+	background-color: white;
+	border: black thick solid;
+	box-sizing: border-box;
+}
+
+.row {
+	clear: left;
+}
+
+div.container {
+	display: block;
+	width: 300px;
+}
+
+.tile.x {
+	background-color: lightcoral;
+}
+
+.tile.o {
+	background-color: lightsteelblue;
+}

@@ -1,0 +1,43 @@
+div.container {
+	width: 600px;
+	clear: left;
+}
+
+div.tower {
+	float: left;
+	width: 200px;
+	height: 70px;
+	background-color: bisque;
+	border: white thick solid;
+	box-sizing: border-box;
+}
+
+div.small {
+	height: 20px;
+	width: 40px;
+	background-color: burlywood;
+	border: white thin solid;
+	box-sizing: border-box;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+div.medium {
+	height: 20px;
+	width: 70px;
+	background-color: coral;
+	border: white thin solid;
+	box-sizing: border-box;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+div.large {
+	height: 20px;
+	width: 100px;
+	background-color: darkgoldenrod;
+	border: white thin solid;
+	box-sizing: border-box;
+	margin-left: auto;
+  margin-right: auto;
+}

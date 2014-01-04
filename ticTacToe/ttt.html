@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js">
+		</script>
+		<script src=
+		"http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js">
+		</script>
+		<script type="text/javascript" src="ticTacToe.js"></script>
+		<script type="text/javascript" src="ticTacToeUI.js"></script>
+		<link rel="stylesheet" href="ticTacToe.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="tile" data-id="0-0"></div>
+				<div class="tile" data-id="0-1"></div>
+				<div class="tile" data-id="0-2"></div>
+			</div>
+			<div class="row">
+				<div class="tile" data-id="1-0"></div>
+				<div class="tile" data-id="1-1"></div>
+				<div class="tile" data-id="1-2"></div>
+			</div>
+			<div class="row">
+				<div class="tile" data-id="2-0"></div>
+				<div class="tile" data-id="2-1"></div>
+				<div class="tile" data-id="2-2"></div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		var game = new TTT.Game();
+		var ui = new TTT.UI(game);
+		ui.start();
+	</script>
+</html>

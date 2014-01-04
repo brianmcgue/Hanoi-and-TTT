@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js">
+		</script>
+		<script src=
+		"http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js">
+		</script>
+		<script type="text/javascript" src="hanoi.js"></script>
+		<script type="text/javascript" src="hanoiUI.js"></script>
+		<link rel="stylesheet" href="hanoi.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="tower0" class="tower">
+			</div>
+			<div id="tower1" class="tower">
+			</div>
+			<div id="tower2" class="tower">
+			</div>
+		</div>
+	</body>
+
+	<script>
+		var game = new Hanoi.Game();
+		var ui = new Hanoi.UI(game);
+		ui.render();
+		ui.installClickHandler();
+	</script>
+</html>
